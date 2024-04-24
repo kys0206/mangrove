@@ -24,15 +24,15 @@ export default function Logout() {
   return (
     <Modal open={open}>
       <ModalContent
-        closeIconClassName="btn-primary btn-outline"
+        closeIconClassName="bg-white border-none text-3xl btn-outline hover:bg-white hover:border-none hover:text-black"
         onCloseIconClicked={onCancel}>
-        <p className="text-xl text-center">Are you sure you want to log out?</p>
+        <p className="text-xl font-bold text-center">로그아웃을 하시겠습니까?</p>
         <ModalAction>
-          <Button className="btn-primary btn-sm" onClick={onAccept}>
-            LOGOUT
+          <Button className="text-white bg-blue-400 btn-sm" onClick={onAccept}>
+            로그아웃
           </Button>
-          <Button className="btn-secondary btn-sm" onClick={onCancel}>
-            CANCEL
+          <Button className="text-white bg-red-400 btn-sm" onClick={onCancel}>
+            취소
           </Button>
         </ModalAction>
       </ModalContent>

@@ -31,13 +31,13 @@ export default function Login() {
   }, [])
 
   return (
-    <div className="flex flex-col min-h-screen border-gray-300 rounded-xl shadow-xl bg-gray-100 border">
+    <div className="flex flex-col min-h-screen bg-gray-100 border border-gray-300 shadow-xl rounded-xl">
       <div className="flex flex-col items-center justify-center flex-1 max-w-sm px-2 mx-auto">
         <div className="w-full px-6 py-8 text-black bg-white rounded shadow-md">
-          <h1 className="mb-8 text-2xl text-center text-primary">Login</h1>
+          <h1 className="mb-8 text-2xl font-bold text-center text-black">로그인</h1>
           <input
             type="text"
-            className="w-full p-3 mb-4 input input-primary"
+            className="w-full p-3 mb-4 border-gray-400 input"
             name="email"
             placeholder="Email"
             value={email}
@@ -45,20 +45,20 @@ export default function Login() {
           />
           <input
             type="password"
-            className="w-full p-3 mb-4 input input-primary"
+            className="w-full p-3 mb-4 border-gray-400 input"
             name="password"
             placeholder="Password"
             value={password}
             onChange={changed('password')}
           />
-          <button type="submit" className="w-full btn btn-primary" onClick={loginAccount}>
-            LOGIN
+          <button type="submit" className="w-full text-white bg-blue-300 btn" onClick={loginAccount}>
+            로그인
           </button>
 
           <div className="mt-6 text-gray-800">
-            Create account?
-            <Link className="btn btn-link btn-primary" to="/signup/">
-              Login
+            계정이 없으신가요?
+            <Link className="text-base text-blue-400 btn btn-link" to="/signup/">
+              회원가입
             </Link>
           </div>
         </div>
