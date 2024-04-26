@@ -10,13 +10,27 @@ type ContextType = {
   jwt?: string
   errorMessage?: string
   loggedUser?: LoggedUser
-  signup: (email: string, password: string, callback?: Callback) => void
+  signup: (
+    email: string,
+    password: string,
+    name: string,
+    birth: string,
+    phone: string,
+    callback?: Callback
+  ) => void
   login: (email: string, password: string, callback?: Callback) => void
   logout: (Callback?: Callback) => void
 }
 
 export const AuthContext = createContext<ContextType>({
-  signup: (email: string, password: string, callback?: Callback) => {},
+  signup: (
+    email: string,
+    password: string,
+    name: string,
+    birth: string,
+    phone: string,
+    callback?: Callback
+  ) => {},
   login: (email: string, password: string, callback?: Callback) => {},
   logout: (Callback?: Callback) => {}
 })
@@ -28,24 +42,34 @@ export const AuthProvider: FC<PropsWithChildren<AuthProviderProps>> = ({children
   const [jwt, setJwt] = useState<string>('')
   const [errorMessage, setErrorMessage] = useState<string>('')
 
-  const signup = useCallback((email: string, password: string, callback?: Callback) => {
-    const user = {email, password}
+  const signup = useCallback(
+    (
+      email: string,
+      password: string,
+      name: string,
+      birth: string,
+      phone: string,
+      callback?: Callback
+    ) => {
+      const user = {email, password, name, birth, phone}
 
-    post('/auth/signup', user)
-      .then(res => res.json())
-      .then((result: {ok: boolean; body?: string; errorMessage?: string}) => {
-        const {ok, body, errorMessage} = result
-        if (ok) {
-          U.writeStringP('jwt', body ?? '').finally(() => {
-            setJwt(body ?? '')
-            //setLoggedUser(notUsed => user)
-            callback && callback()
-            //U.writeObjectP('user', user).finally(() => callback && callback())
-          })
-        } else setErrorMessage(errorMessage ?? '')
-      })
-      .catch((e: Error) => setErrorMessage(e.message))
-  }, [])
+      post('/auth/signup', user)
+        .then(res => res.json())
+        .then((result: {ok: boolean; body?: string; errorMessage?: string}) => {
+          const {ok, body, errorMessage} = result
+          if (ok) {
+            U.writeStringP('jwt', body ?? '').finally(() => {
+              setJwt(body ?? '')
+              //setLoggedUser(notUsed => user)
+              callback && callback()
+              //U.writeObjectP('user', user).finally(() => callback && callback())
+            })
+          } else setErrorMessage(errorMessage ?? '')
+        })
+        .catch((e: Error) => setErrorMessage(e.message))
+    },
+    []
+  )
 
   const login = useCallback((email: string, password: string, callback?: Callback) => {
     const user = {email, password}

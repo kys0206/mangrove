@@ -11,9 +11,11 @@ export default function Hero() {
           <p className="pb-5 text-3xl italic text-center line-clamp-5">
             {/* {D.randomSentence(20)} */}
             여기는
-            <br/><br/>
+            <br />
+            <br />
             어떤 말을
-            <br/><br/>
+            <br />
+            <br />
             쓸까요?
           </p>
           <div className="flex items-center justify-center mt-4">
@@ -24,8 +26,8 @@ export default function Hero() {
         </div>
       </Div>
       <Div
-        src={D.randomImage(2000, 1600, 100)}
-        className="w-full ml-4"
+        src={'assets/images/main.png'}
+        className="w-full ml-4 bg-blue-100 bg-no-repeat rounded-lg"
         minHeight="20rem"
         height="20rm"
       />

@@ -51,7 +51,10 @@ export default function Login() {
             value={password}
             onChange={changed('password')}
           />
-          <button type="submit" className="w-full text-white bg-blue-300 btn" onClick={loginAccount}>
+          <button
+            type="submit"
+            className="w-full text-white bg-blue-400 btn"
+            onClick={loginAccount}>
             로그인
           </button>
 
