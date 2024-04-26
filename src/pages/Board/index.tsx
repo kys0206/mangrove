@@ -26,7 +26,7 @@ export default function Board() {
 
   return (
     <section className="mt-4">
-      <Title>Board</Title>
+      <Title>게시판 카드</Title>
       <DragDropContext onDragEnd={onDragEnd}>
         <ListDroppable className="flex flex-row p-2 mt-4">
           <div className="flex flex-wrap p-2 mt-4">
