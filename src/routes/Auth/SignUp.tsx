@@ -43,7 +43,7 @@ export default function SignUp() {
           <h1 className="mb-8 text-2xl text-center text-black font-bold">회원가입</h1>
           <input
             type="text"
-            className="w-full p-3 mb-4 input input-primary"
+            className="w-full p-3 mb-4 input bg-white border-gray-300"
             name="email"
             placeholder="이메일"
             value={email}
@@ -51,7 +51,7 @@ export default function SignUp() {
           />
           <input
             type="password"
-            className="w-full p-3 mb-4 input input-primary"
+            className="w-full p-3 mb-4 input bg-white border-gray-300"
             name="password"
             placeholder="비밀번호"
             value={password}
@@ -59,7 +59,7 @@ export default function SignUp() {
           />
           <input
             type="password"
-            className="w-full p-3 mb-4 input input-primary"
+            className="w-full p-3 mb-4 input bg-white border-gray-300"
             name="confirm_password"
             placeholder="비밀번호 확인"
             value={confirmPassword}
@@ -69,7 +69,7 @@ export default function SignUp() {
           <div className="pt-5">
             <input
               type="text"
-              className="w-full p-3 mb-4 input input-primary"
+              className="w-full p-3 mb-4 input bg-white border-gray-300"
               name="name"
               placeholder="이름"
               value={name}
@@ -77,7 +77,7 @@ export default function SignUp() {
             />
             <input
               type="text"
-              className="w-full p-3 mb-4 input input-primary"
+              className="w-full p-3 mb-4 input bg-white border-gray-300"
               name="birth"
               placeholder="생년월일"
               value={birth}
@@ -85,7 +85,7 @@ export default function SignUp() {
             />
             <input
               type="text"
-              className="w-full p-3 mb-4 input input-primary"
+              className="w-full p-3 mb-4 input bg-white border-gray-300"
               name="phone"
               placeholder="전화번호"
               value={phone}
@@ -96,7 +96,7 @@ export default function SignUp() {
           <div className="pt-8">
             <button
               type="submit"
-              className="w-full btn bg-blue-400 text-white"
+              className="w-full btn bg-blue-400 text-white border-none"
               onClick={createAccount}>
               회원가입 하기
             </button>

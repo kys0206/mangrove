@@ -5,9 +5,11 @@ import Footer from './Footer'
 export default function Layout() {
   return (
     <>
+      {/* <div className="bg-white text-black"> */}
       <NavigationBar />
       <Outlet />
       <Footer />
+      {/* </div> */}
     </>
   )
 }

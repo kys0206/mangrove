@@ -22,11 +22,18 @@ export default function NavigationBar() {
           className="mr-4 text-base text-black bg-white border-white shadow-none btn hover:bg-blue-200 hover:border-none hover:text-white">
           Home
         </Link>
+
         <Link
+          to="/list/travel"
+          className="ml-4 text-base text-black bg-white border-white shadow-none btn hover:bg-blue-200 hover:border-none hover:text-white">
+          여행정보
+        </Link>
+
+        {/* <Link
           to="/rest"
           className="text-base text-black bg-white border-white shadow-none btn hover:bg-blue-200 hover:border-none hover:text-white">
           Rest Test
-        </Link>
+        </Link> */}
         {loggedUser && (
           <Link
             to="/board"
@@ -49,6 +56,12 @@ export default function NavigationBar() {
             to="/signup"
             className="ml-4 text-blue-500 bg-white border-none shadow-none btn btn-sm hover:bg-white">
             회원가입
+          </RRLink>
+        )}
+
+        {loggedUser && (
+          <RRLink to="/mypage" className="ml-4 mr-4 font-bold">
+            마이페이지
           </RRLink>
         )}
 

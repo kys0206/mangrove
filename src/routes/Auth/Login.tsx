@@ -37,23 +37,23 @@ export default function Login() {
           <h1 className="mb-8 text-2xl font-bold text-center text-black">로그인</h1>
           <input
             type="text"
-            className="w-full p-3 mb-4 border-gray-400 input"
+            className="w-full p-3 mb-4 border-gray-400 input bg-white"
             name="email"
-            placeholder="Email"
+            placeholder="이메일"
             value={email}
             onChange={changed('email')}
           />
           <input
             type="password"
-            className="w-full p-3 mb-4 border-gray-400 input"
+            className="w-full p-3 mb-4 border-gray-400 input bg-white"
             name="password"
-            placeholder="Password"
+            placeholder="비밀번호"
             value={password}
             onChange={changed('password')}
           />
           <button
             type="submit"
-            className="w-full text-white bg-blue-400 btn"
+            className="w-full text-white bg-blue-400 btn border-none"
             onClick={loginAccount}>
             로그인
           </button>
