@@ -24,6 +24,12 @@ export default function NavigationBar() {
         </Link>
 
         <Link
+          to="/rest"
+          className="border-transparent shadow-none btn hover:underline bg-inherit">
+          Rest Test
+        </Link>
+
+        <Link
           to="/list/travel"
           className="ml-4 text-base text-black bg-white border-white shadow-none btn hover:bg-blue-200 hover:border-none hover:text-white">
           여행정보

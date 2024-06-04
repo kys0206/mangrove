@@ -15,16 +15,19 @@ import Logout from './Auth/Logout'
 import NoMatch from './NoMatch'
 import TravelList from '../pages/Travel/travelList'
 import TravelInfo from '../pages/Travel/travelInfo'
+import RestTest from './RestTest'
 
 export default function RoutesSetup() {
   return (
-    <div className="bg-white text-black">
+    <div className="text-black bg-white">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<LandingPage />} />
           <Route path="mypage" element={<Mypage />} />
           <Route path="list/travel" element={<TravelList />} />
           <Route path="list/travel/info" element={<TravelInfo />} />
+
+          <Route path="/rest" element={<RestTest />} />
 
           <Route
             path="/board"
